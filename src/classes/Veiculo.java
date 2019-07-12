@@ -89,7 +89,7 @@ public class Veiculo {
 		if(placa.intern() == "cancelar".intern()) {
 			return 0;
 		}
-		renavam = JOptionPane.showInputDialog("Digite o n� do Renavam: " );
+		renavam = JOptionPane.showInputDialog("Digite o no do Renavam: " );
 		hodometro = Integer.parseInt(JOptionPane.showInputDialog("Digite o numero do hodometro: "));
 		
 		return 1;
@@ -104,7 +104,7 @@ public class Veiculo {
 			"Aceita combustivel: "+ tipoCombustivel + "\n" +		
 			"Cor: "+ cor + "\n" +
 			"Placa:"+ placa + "\n" +
-			"N� Renavam: "+ renavam + "\n" +
+			"No Renavam: "+ renavam + "\n" +
 			"Hodometro atual: "+ hodometro + "\n");			
 	}
 	
