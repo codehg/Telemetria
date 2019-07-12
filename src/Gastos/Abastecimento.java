@@ -31,7 +31,7 @@ public class Abastecimento extends Despesas {
 		if (combustivel.intern() == "cancelar".intern()) {
 			return 0;
 		}
-		hodometro = Integer.parseInt(JOptionPane.showInputDialog("Digite o n� do hodometro."));
+		hodometro = Integer.parseInt(JOptionPane.showInputDialog("Digite o No do hodometro."));
 		try {
 			int c = 0;
 			for (int i = 0; i < lista.size(); i++)
@@ -78,11 +78,11 @@ public class Abastecimento extends Despesas {
 
 	public String showAbs() {
 		if (cheio == 0) {
-			return "Data: " + data + "\n" + "Tipo de combust�vel:" + combustivel + "\n" + "Hodometro:" + hodometro
+			return "Data: " + data + "\n" + "Tipo de combustivel:" + combustivel + "\n" + "Hodometro:" + hodometro
 					+ "\n" + "Quantidade de combustivel:" + quantidade + "\n" + "Preco:" + preco + "\n"
 					+ "Abastecimento do tipo cheio? Sim\n";
 		} else {
-			return "Data: " + data + "\n" + "Tipo de combust�vel:" + combustivel + "\n" + "Hodometro:" + hodometro
+			return "Data: " + data + "\n" + "Tipo de combustivel:" + combustivel + "\n" + "Hodometro:" + hodometro
 					+ "\n" + "Quantidade de combustivel:" + quantidade + "\n" + "Preco:" + preco + "\n"
 					+ "Abastecimento do tipo cheio? Nao\n";
 		}

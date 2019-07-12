@@ -105,7 +105,7 @@ public class Veiculo {
 			"Cor: "+ cor + "\n" +
 			"Placa:"+ placa + "\n" +
 			"No Renavam: "+ renavam + "\n" +
-			"Hodometro atual: "+ hodometro + "\n");			
+			"Hodometro : "+ hodometro + "\n");			
 	}
 	
 	public String getMarca() {

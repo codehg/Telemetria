@@ -11,9 +11,9 @@ public class Impostos extends Despesas {
 
 	public int newImposto() {
 		nomeImposto = JOptionPane.showInputDialog("Digite o nome do imposto: ");
-		valor = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor do imposto: "));
+		valorImp = Float.parseFloat(JOptionPane.showInputDialog("Digite o valor do imposto: "));
 		try {
-			if (valor <= 0) {
+			if (valorImp <= 0) {
 				throw new ValorInvalidoException();
 			}
 		} catch (ValorInvalidoException e) {
@@ -59,5 +59,7 @@ public class Impostos extends Despesas {
 	public void setNomeImposto(String nomeImposto) {
 		this.nomeImposto = nomeImposto;
 	}
-
+	public float getValor() {
+		return valorImp;
+	}
 }

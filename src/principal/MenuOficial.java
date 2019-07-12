@@ -25,9 +25,7 @@ public class MenuOficial{
 		
 		private JFrame frmMenu;
 
-		/**
-		 * Launch the application.
-		 */
+		
 		public static void main(String[] args) {
 			
 			
@@ -145,7 +143,7 @@ public class MenuOficial{
 			btnNewButtonimp.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta ação!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta aï¿½ï¿½o!");
 					} else {
 						String msg = "";
 						for(int i = 0; i < pessoa.listaVeiculo.size(); i++) {
@@ -155,7 +153,7 @@ public class MenuOficial{
 							}
 						}
 						if(msg == "") {
-							JOptionPane.showMessageDialog(null, "Você não possui nenhum veiculo!");
+							JOptionPane.showMessageDialog(null, "Vocï¿½ nï¿½o possui nenhum veiculo!");
 						}else {
 							JOptionPane.showMessageDialog(null, msg);
 						}
@@ -190,7 +188,7 @@ public class MenuOficial{
 			btnNewButton_abs.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta ação!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta aï¿½ï¿½o!");
 					} else {
 						String msg = "";
 						for(int i = 0; i < pessoa.listaVeiculo.size(); i++) {
@@ -200,7 +198,7 @@ public class MenuOficial{
 							}
 						}
 						if(msg == "") {
-							JOptionPane.showMessageDialog(null, "Você não possui nenhum veiculo!");
+							JOptionPane.showMessageDialog(null, "Vocï¿½ nï¿½o possui nenhum veiculo!");
 						}else {
 							JOptionPane.showMessageDialog(null, msg);
 						}
@@ -235,17 +233,17 @@ public class MenuOficial{
 			btnNewButton_man.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta ação!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta aï¿½ï¿½o!");
 					} else {
 						String msg = "";
 						for(int i = 0; i < pessoa.listaVeiculo.size(); i++) {
-							msg += "Manutenções do carro com placa " + pessoa.listaVeiculo.get(i).getPlaca() + "\n";
+							msg += "Manutenï¿½ï¿½es do carro com placa " + pessoa.listaVeiculo.get(i).getPlaca() + "\n";
 							for(int j = 0; j < pessoa.listaVeiculo.get(i).listaManutencao.size(); j++) {
 								msg += pessoa.listaVeiculo.get(i).listaManutencao.get(j).showManutencao() + "\n";
 							}
 						}
 						if(msg == "") {
-							JOptionPane.showMessageDialog(null, "Você não possui nenhum veiculo!");
+							JOptionPane.showMessageDialog(null, "Vocï¿½ nï¿½o possui nenhum veiculo!");
 						}else {
 							JOptionPane.showMessageDialog(null, msg);
 						}
@@ -259,7 +257,7 @@ public class MenuOficial{
 			btnAdicionarVeiculo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta ação!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta aï¿½ï¿½o!");
 					} else {
 						pessoa.novoVeiculo();
 					}
@@ -272,7 +270,7 @@ public class MenuOficial{
 			btnMostrarVeiculo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta ação!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta aï¿½ï¿½o!");
 					} else {
 						int c = -1;
 						String placa = JOptionPane.showInputDialog("Digite o a placa do veiculo a ser exibido: " );
@@ -310,12 +308,13 @@ public class MenuOficial{
 			btnRelatorioSimples.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta ação!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado!");
 					} else {
 						String msg = "";
 						float valorTotal = 0;
 						int i,x,y,z;
 						for(i =0; i < pessoa.listaVeiculo.size(); i++) {
+							valorTotal = 0;
 							msg = "Despesas do veiculo: " + pessoa.listaVeiculo.get(i).getPlaca() + "\n";
 							msg += "Despesas com abastecimento: \n";
 							for(x=0; x < pessoa.listaVeiculo.get(i).listaAbastecimento.size(); x++) {
@@ -345,18 +344,18 @@ public class MenuOficial{
 			btnRelatorioDeDesempenho.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta ação!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado!");
 					} else {
 						String msg = "";
 						int count = 0;
 						float km_rodado, litros_abastecidos;
 						float consumoMedio = 0;
 						for(int i = 0; i < pessoa.listaVeiculo.size(); i++) {
-							msg += "Relatorio de consumo para o veiculo com placa " + pessoa.listaVeiculo.get(i).getPlaca() + " : ";
+							msg += "Relatorio de consumo do veiculo " + pessoa.listaVeiculo.get(i).getPlaca() + " : ";
 							for(int j = 0; j < pessoa.listaVeiculo.get(i).listaAbastecimento.size() - 1; j++) {
 								if (pessoa.listaVeiculo.get(i).listaAbastecimento.get(j).getCheio() == 0 && pessoa.listaVeiculo.get(i).listaAbastecimento.get(j+1).getCheio() == 0) {
 									km_rodado = pessoa.listaVeiculo.get(i).listaAbastecimento.get(j+1).getHodometro() - pessoa.listaVeiculo.get(i).listaAbastecimento.get(j).getHodometro();
-									litros_abastecidos = pessoa.listaVeiculo.get(i).listaAbastecimento.get(j).getQuantidade();
+									litros_abastecidos = pessoa.listaVeiculo.get(i).listaAbastecimento.get(j+1).getQuantidade();
 									count ++;
 									consumoMedio += km_rodado / litros_abastecidos;
 								}
@@ -367,12 +366,14 @@ public class MenuOficial{
 					
 						String msg2 = "";
 						float valorTotal = 0;
-						int x,y,z;
+						float kmrodados;
+						int x,y,z,c = 0;
 						for(int i =0; i < pessoa.listaVeiculo.size(); i++) {
 							valorTotal = 0;
 							msg2 += "Custo por km do veiculo com placa " + pessoa.listaVeiculo.get(i).getPlaca() + " : ";
 							for(x=0; x < pessoa.listaVeiculo.get(i).listaAbastecimento.size(); x++) {
 								valorTotal += pessoa.listaVeiculo.get(i).listaAbastecimento.get(x).getValor();
+								c = x;
 							}
 							for(y=0; y < pessoa.listaVeiculo.get(i).listaImpostos.size(); y++) {
 								valorTotal += pessoa.listaVeiculo.get(i).listaImpostos.get(y).getValor();
@@ -380,7 +381,8 @@ public class MenuOficial{
 							for(z=0; z < pessoa.listaVeiculo.get(i).listaManutencao.size(); z++) {
 								valorTotal += pessoa.listaVeiculo.get(i).listaManutencao.get(z).getValor();
 							}
-							msg2 += valorTotal + "\n";
+							kmrodados = pessoa.listaVeiculo.get(i).listaAbastecimento.get(c).getHodometro() - pessoa.listaVeiculo.get(i).getHdometro();
+							msg2 += valorTotal/kmrodados + "\n";
 						}
 						JOptionPane.showMessageDialog(null, msg2);
 					}
