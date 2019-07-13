@@ -41,16 +41,12 @@ public class MenuOficial{
 			});
 		}
 
-		/**
-		 * Create the application.
-		 */
+		
 		public MenuOficial() {
 			initialize();
 		}
 
-		/**
-		 * Initialize the contents of the frame.
-		 */
+		
 		private void initialize() {
 			
 			frmMenu = new JFrame();
@@ -82,7 +78,7 @@ public class MenuOficial{
 			btnAdicionarUsuario.setBounds(163, 86, 115, 23);
 			frmMenu.getContentPane().add(btnAdicionarUsuario);
 			
-			JButton btnMostrarUsuario = new JButton("Exisitente");
+			JButton btnMostrarUsuario = new JButton("Existente");
 			btnMostrarUsuario.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					String nome = JOptionPane.showInputDialog("Digite seu nome.");
@@ -143,7 +139,7 @@ public class MenuOficial{
 			btnNewButtonimp.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta a��o!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta acao!");
 					} else {
 						String msg = "";
 						for(int i = 0; i < pessoa.listaVeiculo.size(); i++) {
@@ -153,7 +149,7 @@ public class MenuOficial{
 							}
 						}
 						if(msg == "") {
-							JOptionPane.showMessageDialog(null, "Voc� n�o possui nenhum veiculo!");
+							JOptionPane.showMessageDialog(null, "Voce nao possui nenhum veiculo!");
 						}else {
 							JOptionPane.showMessageDialog(null, msg);
 						}
@@ -188,7 +184,7 @@ public class MenuOficial{
 			btnNewButton_abs.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta a��o!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta acao!");
 					} else {
 						String msg = "";
 						for(int i = 0; i < pessoa.listaVeiculo.size(); i++) {
@@ -198,7 +194,7 @@ public class MenuOficial{
 							}
 						}
 						if(msg == "") {
-							JOptionPane.showMessageDialog(null, "Voc� n�o possui nenhum veiculo!");
+							JOptionPane.showMessageDialog(null, "Voce nao possui nenhum veiculo!");
 						}else {
 							JOptionPane.showMessageDialog(null, msg);
 						}
@@ -233,17 +229,17 @@ public class MenuOficial{
 			btnNewButton_man.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta a��o!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta acao!");
 					} else {
 						String msg = "";
 						for(int i = 0; i < pessoa.listaVeiculo.size(); i++) {
-							msg += "Manuten��es do carro com placa " + pessoa.listaVeiculo.get(i).getPlaca() + "\n";
+							msg += "Manutencoes do carro com placa " + pessoa.listaVeiculo.get(i).getPlaca() + "\n";
 							for(int j = 0; j < pessoa.listaVeiculo.get(i).listaManutencao.size(); j++) {
 								msg += pessoa.listaVeiculo.get(i).listaManutencao.get(j).showManutencao() + "\n";
 							}
 						}
 						if(msg == "") {
-							JOptionPane.showMessageDialog(null, "Voc� n�o possui nenhum veiculo!");
+							JOptionPane.showMessageDialog(null, "Voce nao possui nenhum veiculo!");
 						}else {
 							JOptionPane.showMessageDialog(null, msg);
 						}
@@ -257,7 +253,7 @@ public class MenuOficial{
 			btnAdicionarVeiculo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta a��o!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta acao!");
 					} else {
 						pessoa.novoVeiculo();
 					}
@@ -270,7 +266,7 @@ public class MenuOficial{
 			btnMostrarVeiculo.addActionListener(new ActionListener() {
 				public void actionPerformed(ActionEvent e) {
 					if(pessoa == null) {
-						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta a��o!");
+						JOptionPane.showMessageDialog(null, "Voce deve estar logado para realizar esta acao!");
 					} else {
 						int c = -1;
 						String placa = JOptionPane.showInputDialog("Digite o a placa do veiculo a ser exibido: " );
